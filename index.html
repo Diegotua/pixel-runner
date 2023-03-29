@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pixel run</title>
+    <style>
+        body{
+            background-color: rgb(47,47,47);
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @font-face {
+            font-family: "text menu";
+            src: url(./assets/RetroGrade-K7ow7.otf);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="contenedor"></div>
+        <audio src="./assets/8-bit-arcade-138828.mp3" id="bg"></audio>
+        <audio src="./assets/videogame-death-sound-43894.mp3"id="gameover"></audio>
+        <audio src="./assets/cartoon-jump-6462.mp3"id="jump"></audio>
+    </main>
+    
+     <script src="node_modules/Phaser/dist/Phaser.js"></script>
+     <script src="src\init.js" type="module"></script>
+</body>
+</html>
