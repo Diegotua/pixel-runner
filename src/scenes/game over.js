@@ -40,10 +40,13 @@ export default class Gameover extends Phaser.Scene{
         this.totalpoints.setText(this.puntos)
        
         
-        this.button= this.add.sprite(490,400,"Playagaing")
+        this.button= this.add.sprite(490,400,"gameover")
         this.button.setInteractive()
         this.button.on("pointerdown",()=>{
             this.scene.start("gameover")
+            
+            this.scene.launch("game")
+            this.scene.stop()
         })
 
 

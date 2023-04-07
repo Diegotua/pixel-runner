@@ -28,7 +28,7 @@ export default class GameScene extends Phaser.Scene{
         this.bird=this.physics.add.group()
 
         this.interval=setInterval(
-            ()=>{this.grupo.add(new Cactus (this,1000,350,"cactus"))
+            ()=>{this.grupo.add(new Cactus (this,1000,355,"cactus"))
                      this.timerbird=setTimeout(()=>{this.bird.add(new Bird (this ,1000 ,250 ,"bird"))},600)}
         , Math.floor((Math.random()* (max-min+1))) + min)    
         //animation
@@ -71,8 +71,9 @@ export default class GameScene extends Phaser.Scene{
         clearInterval(this.puntosintervalos)
         clearTimeout(this.timerbird)
         this.scene.start("gameover",this.puntos)
-        gameoveraudio.play()
+        gameoveraudio.play("gameover")
         this.bird.clear(true,true)
+        
     }
     update(){
         if(this.cursorspace.isDown && this.jumping===true){
