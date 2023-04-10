@@ -28,7 +28,7 @@ export default class GameScene extends Phaser.Scene{
         this.bird=this.physics.add.group()
 
         this.interval=setInterval(
-            ()=>{this.grupo.add(new Cactus (this,1000,355,"cactus"))
+            ()=>{this.grupo.add(new Cactus (this,1000,385,"cactus").setScale(0.5))
                      this.timerbird=setTimeout(()=>{this.bird.add(new Bird (this ,1000 ,250 ,"bird"))},600)}
         , Math.floor((Math.random()* (max-min+1))) + min)    
         //animation
@@ -77,7 +77,7 @@ export default class GameScene extends Phaser.Scene{
     }
     update(){
         if(this.cursorspace.isDown && this.jumping===true){
-            this.dino.body.setVelocityY(-600)
+            this.dino.body.setVelocityY(-500)
             this.dino.anims.play("jump")
             jumpAudio.play()
             let timer = setTimeout(()=>{
@@ -87,7 +87,7 @@ export default class GameScene extends Phaser.Scene{
         }
         if (this.jumping===true){
             this.dino.on("pointerup",()=>{
-                this.dino.body.setVelocityY(-600)
+                this.dino.body.setVelocityY(-500)
                 this.dino.anims.play("jump")
                 jumpAudio.play()
                 let timer = setTimeout(()=>{

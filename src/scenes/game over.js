@@ -10,7 +10,7 @@ export default class Gameover extends Phaser.Scene{
     }
     create(){
         const configText={
-            x:170,
+            x:235,
             y:200,
             text: "Game Over",
             style:{
@@ -28,8 +28,8 @@ export default class Gameover extends Phaser.Scene{
             y:300,
             text: "Your Score Was:",
             style:{
-                fontFamily:"text menu",
-                color: 0xfffff,
+                fontFamily:"courier",
+                color: "#000000",
                 fontSize:20
             
         }
